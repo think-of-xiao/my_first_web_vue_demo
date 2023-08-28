@@ -8,7 +8,7 @@ const request = axios.create({
   timeout: 5000, //超时的时间的设置
 })
 //第二步:request实例添加请求与响应拦截器
-request.interceptors.request.use((config) => {
+request.interceptors.request.use(config => {
   //config配置对象,headers属性请求头,经常给服务器端携带公共参数
   //返回配置对象
   return config
@@ -16,13 +16,13 @@ request.interceptors.request.use((config) => {
 
 //第三步:响应拦截器
 request.interceptors.response.use(
-  (response) => {
+  response => {
     //成功回调
     console.log(response.data)
     //简化数据
     return response.data
   },
-  (error) => {
+  error => {
     //失败回调:处理http网络错误的
     //定义一个变量:存储网络错误信息
     let message = ''

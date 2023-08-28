@@ -1,4 +1,4 @@
-<script lang='ts' setup>
+<script lang="ts" setup>
 import { onMounted, ref, getCurrentInstance } from 'vue'
 import request from '@u/request.ts'
 import type { Action } from 'element-plus'
@@ -20,9 +20,13 @@ onMounted(() => {
       username: 'admin',
       password: 'admin123',
     },
-  }).then((value) => {
-    console.log(`请求完成数据下发了-app-vue-onMounted value = ${value.message}`)
-  }).finally(() => console.log('请求结束了-app-vue-onMounted'))
+  })
+    .then(value => {
+      console.log(
+        `请求完成数据下发了-app-vue-onMounted value = ${value.message}`,
+      )
+    })
+    .finally(() => console.log('请求结束了-app-vue-onMounted'))
 })
 
 //@ts-ignore
@@ -41,27 +45,30 @@ const open = () => {
 }
 
 const open2 = () => {
-  ElMessageBox.alert('这是一条信息', '我是标题', {
-    confirmButtonText: '确认',
-    callback: (action: Action) => {
-      //@ts-ignore
-      ElMessage({
-        type: 'info',
-        message: `action = ${action}`,
-      })
+  ElMessageBox.alert(
+    '这是一条信息',
+    '我是标题',
+    {
+      confirmButtonText: '确认',
+      callback: (action: Action) => {
+        //@ts-ignore
+        ElMessage({
+          type: 'info',
+          message: `action = ${action}`,
+        })
+      },
     },
-  }, appContext)
+    appContext,
+  )
 }
 </script>
 
 <template>
   <el-text>我是test = {{ msg }} {{ count }}</el-text>
   <el-main>
-    <el-button @click='open2'>点我弹出ElMessageBox</el-button>
+    <el-button @click="open2">点我弹出ElMessageBox</el-button>
   </el-main>
-  <Pagination title='我是分页title' :flag='true' :type='0'></Pagination>
+  <Pagination title="我是分页title" :flag="true" :type="0"></Pagination>
 </template>
 
-<style scoped>
-
-</style>
+<style scoped></style>
