@@ -19,8 +19,11 @@ export default defineConfig(({ command, mode }) => {
       alias: {
         '@': path.resolve('./src'),
         '@c': path.resolve('./src/components'),
-        '@s': path.resolve('./src/styles'),
+        '@style': path.resolve('./src/styles'),
         '@u': path.resolve('./src/utils'),
+        '@v': path.resolve('./src/views'),
+        '@r': path.resolve('./src/router'),
+        '@store': path.resolve('./src/store'),
       },
     },
     // 我们通过css.preprocessorOptions.scss.additionalData来自动引入一个全局的Sass文件，

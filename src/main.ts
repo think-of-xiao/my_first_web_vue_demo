@@ -11,12 +11,20 @@ import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
 import 'virtual:svg-icons-register'
 // 引入自定义插件对象：注册整个项目全局组件
 import GlobalComponent from '@c/index.ts'
+// 引入Pinia管理全局状态共享
+import pinia from '@store/index.ts'
+// 引入路由
+import router from '@r/index.ts'
 
 import App from '@/App.vue'
 // 引入模版的全局样式
-import '@s/index.scss'
+import '@style/index.scss'
 
 const app = createApp(App)
+
 app.use(ElementPlus, { locale: zhCn })
 app.use(GlobalComponent)
+app.use(pinia)
+app.use(router)
+
 app.mount('#app')

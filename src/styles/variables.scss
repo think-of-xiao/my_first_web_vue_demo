@@ -4,7 +4,6 @@
 $primary-color: #007bff;
 $secondary-color: #6c757d;
 $font-size: 16px;
-
 $base-menu-background: #001529;
 $base-menu-width: 260px;
 $base-menu-min-width: 50px;
@@ -17,8 +16,8 @@ $base-scrollbar-thumb-width: $base-scrollbar-width;
 // mixins.scss
 @mixin flex-center {
   display: flex;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 }
 
 .toxTest {

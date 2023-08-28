@@ -26,8 +26,11 @@
       // 路径映射，相对于baseUrl
       "@/*": ["src/*"],
       "@c/*": ["src/components/*"],
-      "@s/*": ["src/styles/*"],
-      "@u/*": ["src/utils/*"]
+      "@style/*": ["src/styles/*"],
+      "@u/*": ["src/utils/*"],
+      "@v/*": ["src/views/*"],
+      "@r/*": ["src/router/*"],
+      "@store/*": ["src/store/*"]
     }
   },
   "include": ["src/**/*.ts", "src/**/*.d.ts", "src/**/*.tsx", "src/**/*.vue"],
