@@ -1,3 +1,6 @@
+//清除默认样式
+@import './reset.scss';
+
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -77,4 +80,21 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+// 滚动条外观设置
+::-webkit-scrollbar {
+  width: $base-scrollbar-width;
+}
+
+// 滚动条背景样式设置
+::-webkit-scrollbar-track {
+  background: $base-menu-background;
+}
+
+// 滚动条滑块样式设置
+::-webkit-scrollbar-thumb {
+  width: $base-scrollbar-thumb-width;
+  background-color: lightcoral;
+  border-radius: 10px;
 }

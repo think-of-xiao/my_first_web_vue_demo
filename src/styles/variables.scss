@@ -1,0 +1,30 @@
+// 全局的Sass文件
+// 可以定义一些全局的样式变量和混合器
+
+$primary-color: #007bff;
+$secondary-color: #6c757d;
+$font-size: 16px;
+
+$base-menu-background: #001529;
+$base-menu-width: 260px;
+$base-menu-min-width: 50px;
+$base-tabbar-height: 50px;
+$base-menu-logo-height: 50px;
+$base-logo-title-fontSize: 20px;
+$base-scrollbar-width: 10px;
+$base-scrollbar-thumb-width: $base-scrollbar-width;
+
+// mixins.scss
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.toxTest {
+  @include flex-center;
+
+  .button {
+    background-color: $primary-color;
+  }
+}
