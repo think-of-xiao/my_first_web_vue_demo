@@ -20,9 +20,9 @@ const router = createRouter({
 router.beforeEach((to, _, next) => {
   const store = useUserStore()
   console.log(
-    `router.beforeEach routeName = ${
-      String(to.name)
-    }, isLogin= ${store.isLogin()}, token = ${store.token}`,
+    `router.beforeEach routeName = ${String(
+      to.name,
+    )}, isLogin= ${store.isLogin()}, token = ${store.token}`,
   )
   if (to.name !== 'login' && !store.isLogin()) next({ name: 'login' })
   else if (to.name === 'login' && store.isLogin()) next({ path: '/' })
