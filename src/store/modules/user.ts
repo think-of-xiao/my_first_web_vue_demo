@@ -28,7 +28,7 @@ export const useUserStore = defineStore(
     }
 
     return { token, login, isLogin }
-  }
+  },
   /*, {
   state: () => {
     return {
@@ -48,7 +48,7 @@ export const useUserStore = defineStore(
       return (!(this.token == null || this.token === ''))
     },
   },
-}*/,
+}*/
 )
 
 // 暴露当前用户信息相关的状态管理Store

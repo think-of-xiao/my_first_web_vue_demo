@@ -17,8 +17,8 @@ export const constantRoute = [
         path: '/systemSet',
         component: () => import('@v/404/index.vue'),
         name: 'systemSet',
-      }
-    ]
+      },
+    ],
   },
   {
     // 404路由
