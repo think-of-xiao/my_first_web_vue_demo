@@ -63,12 +63,12 @@ button:focus-visible {
   padding: 2em;
 }
 
-//#app {
-//  max-width: 1280px;
-//  margin: 0 auto;
-//  padding: 2rem;
-//  text-align: center;
-//}
+#app {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+}
 
 @media (prefers-color-scheme: light) {
   :root {
@@ -88,6 +88,7 @@ button:focus-visible {
 // 滚动条外观设置
 ::-webkit-scrollbar {
   width: $base-scrollbar-width;
+  height: $base-scrollbar-width;
 }
 
 // 滚动条背景样式设置
@@ -98,6 +99,6 @@ button:focus-visible {
 // 滚动条滑块样式设置
 ::-webkit-scrollbar-thumb {
   width: $base-scrollbar-thumb-width;
-  background-color: lightcoral;
+  background-color: #cccccc;
   border-radius: 10px;
 }

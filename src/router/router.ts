@@ -11,6 +11,14 @@ export const constantRoute = [
     path: '/',
     component: () => import('@v/home/index.vue'),
     name: 'home',
+    children: [
+      {
+        // 子路由
+        path: '/systemSet',
+        component: () => import('@v/404/index.vue'),
+        name: 'systemSet',
+      }
+    ]
   },
   {
     // 404路由
