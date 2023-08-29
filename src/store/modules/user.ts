@@ -21,6 +21,7 @@ export const useUserStore = defineStore(
         token = result.data.token as string
         // 本地保存token
         SET_TOKEN(result.data.token as string)
+        console.log(`token = ${token}`)
         return 'ok'
       } else {
         return Promise.reject(new Error(result.data.message))

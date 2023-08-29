@@ -17,14 +17,15 @@ const router = createRouter({
 })
 
 // 全局路由守卫
-router.beforeEach((to, from, next) => {
+router.beforeEach((to, _, next) => {
   const store = useUserStore()
   console.log(
     `router.beforeEach routeName = ${
-      to.name
+      String(to.name)
     }, isLogin= ${store.isLogin()}, token = ${store.token}`,
   )
   if (to.name !== 'login' && !store.isLogin()) next({ name: 'login' })
+  else if (to.name === 'login' && store.isLogin()) next({ path: '/' })
   else next()
 })
 

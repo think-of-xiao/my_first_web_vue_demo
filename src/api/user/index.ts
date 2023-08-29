@@ -4,7 +4,7 @@ import type { loginForm, loginRespData, userInfoData } from './type.ts'
 
 // 统一接口管理
 enum API {
-  LOGIN_URL = 'user/login',
+  LOGIN_URL = '/user/login',
   USERINFO_URL = '/user/info',
 }
 
