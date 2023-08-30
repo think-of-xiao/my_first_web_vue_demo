@@ -2,26 +2,26 @@
 import { defineStore } from 'pinia' // 引入创建状态共享的方法
 import { reqLogin } from '@/api/user/index.ts' // 引入相关接口
 import type { loginForm } from '@/api/user/type.ts' // 引入数据模型
-// import { ref } from 'vue'
+import { ref } from 'vue'
 import { SET_TOKEN, GET_TOKEN } from '@u/token.ts'
 
 export const useUserStore = defineStore(
   'user',
   () => {
-    let token = GET_TOKEN()
+    let token = ref(GET_TOKEN())
 
     function isLogin() {
-      return !(token == null || token === '')
+      return !(token.value == null || token.value === '')
     }
 
     async function login(data: loginForm) {
       let result = await reqLogin(data)
       if (result.code == 200) {
         // 登录成功需要保存token，以及跳转至home页
-        token = result.data.token as string
+        token.value = result.data.token as string
         // 本地保存token
         SET_TOKEN(result.data.token as string)
-        console.log(`token = ${token}`)
+        console.log(`token = ${token.value}`)
         return 'ok'
       } else {
         return Promise.reject(new Error(result.data.message))
