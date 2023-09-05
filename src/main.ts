@@ -22,7 +22,7 @@ import '@style/index.scss'
 const app = createApp(App)
 
 app.use(ElementPlus, { locale: zhCn })
-app.use(GlobalComponent)
+GlobalComponent.install(app)
 app.use(pinia)
 app.use(router)
 

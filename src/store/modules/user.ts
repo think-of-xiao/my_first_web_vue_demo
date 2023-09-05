@@ -4,11 +4,14 @@ import { reqLogin } from '@/api/user/index.ts' // 引入相关接口
 import type { loginForm } from '@/api/user/type.ts' // 引入数据模型
 import { ref } from 'vue'
 import { SET_TOKEN, GET_TOKEN } from '@u/token.ts'
+import { constantRoute } from '@r/router.ts'
 
 export const useUserStore = defineStore(
   'user',
   () => {
     let token = ref(GET_TOKEN())
+    // 加载登录成功后的所有常量菜单路由信息
+    const menuRoutes = constantRoute[1].children
 
     function isLogin() {
       return !(token.value == null || token.value === '')
@@ -28,7 +31,7 @@ export const useUserStore = defineStore(
       }
     }
 
-    return { token, login, isLogin }
+    return { token, login, isLogin, menuRoutes }
   },
   /*, {
   state: () => {

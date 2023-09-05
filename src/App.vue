@@ -3,17 +3,17 @@
 </script>
 
 <template>
-  <!--  <div>-->
-  <!--    <a href="https://vitejs.dev" target="_blank">-->
-  <!--      <img src="/vite.svg" class="logo" alt="Vite logo" />-->
-  <!--    </a>-->
-  <!--    <a href="https://vuejs.org/" target="_blank">-->
-  <!--      <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />-->
-  <!--    </a>-->
-  <!--  </div>-->
-  <!--  <HelloWorld-->
-  <!--    msg="测试项目搭建、验证组件使用（mockjs、element plus、axios等的使用）"-->
-  <!--  />-->
+  <!--    <div>
+        <a href="https://vitejs.dev" target="_blank">
+          <img src="/vite.svg" class="logo" alt="Vite logo" />
+        </a>
+        <a href="https://vuejs.org/" target="_blank">
+          <img src="./assets/vue.svg" class="logo vue" alt="Vue logo" />
+        </a>
+      </div>
+      <HelloWorld
+        msg="测试项目搭建、验证组件使用（mockjs、element plus、axios等的使用）"
+      />-->
   <router-view></router-view>
 </template>
 
