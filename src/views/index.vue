@@ -6,7 +6,11 @@
       <!--   支持滑动   -->
       <el-scrollbar wrap-class='scrollbar-wrapper'>
         <!--   展示菜单   -->
-        <el-menu background-color='$base-menu-background' text-color='#213547' :default-active='route.path'>
+        <el-menu
+          background-color='$base-menu-background'
+          text-color='#213547'
+          :default-active='route.path'
+        >
           <Menu :menuList='userStore.menuRoutes'></Menu>
         </el-menu>
       </el-scrollbar>

@@ -22,7 +22,7 @@ declare module 'vue' {
     ElSubMenu: typeof import('element-plus/es')['ElSubMenu']
     ElText: typeof import('element-plus/es')['ElText']
     HelloWorld: typeof import('./src/components/HelloWorld.vue')['default']
-    Layout: typeof import('./src/components/layout/index.vue')['default']
+    Layout: (typeof import('./src/components/layout/index.vue'))['default']
     Logo: typeof import('./src/components/layout/logo/index.vue')['default']
     Main: typeof import('./src/components/layout/main/index.vue')['default']
     Menu: typeof import('./src/components/layout/menu/index.vue')['default']
