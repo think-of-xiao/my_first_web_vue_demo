@@ -47,8 +47,9 @@ const route = useRoute()
 
   .layout_slider {
     width: $base-menu-width;
-    height: 100vh;
-    position: absolute;
+    height: 100%;
+    position: fixed;
+    top: 0;
     left: 0;
     background: $base-menu-background;
   }
